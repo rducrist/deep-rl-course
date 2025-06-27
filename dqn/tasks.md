@@ -43,7 +43,8 @@ Tasks:
     Include ε decay schedule.
 
 Deliverable: Code that logs selected actions and current ε value per step.
-Milestone 4 — Experience Replay Buffer
+
+### Milestone 4 — Experience Replay Buffer
 
 Objective: Implement a replay buffer to store and sample past transitions.
 
@@ -58,7 +59,8 @@ Tasks:
     Validate shapes and random sampling.
 
 Deliverable: Unit tests showing the buffer adds and samples transitions correctly.
-Milestone 5 — Training Logic
+
+### Milestone 5 — Training Logic
 
 Objective: Implement one gradient step using sampled batch.
 
@@ -75,7 +77,8 @@ Tasks:
     Backpropagate MSE loss and update Q-network.
 
 Deliverable: A function train_step() that can be called repeatedly in a loop.
-Milestone 6 — Target Network
+
+### Milestone 6 — Target Network
 
 Objective: Stabilize training by using a fixed target network.
 
@@ -88,7 +91,8 @@ Tasks:
     Ensure it’s used only for computing the target.
 
 Deliverable: Code to synchronize weights and verify it updates correctly.
-Milestone 7 — Training Loop
+
+### Milestone 7 — Training Loop
 
 Objective: Combine all components into a working training pipeline.
 
@@ -103,7 +107,8 @@ Tasks:
     Add checkpointing if needed.
 
 Deliverable: Script that trains a DQN agent and logs reward curves over episodes.
-Milestone 8 — Evaluation and Visualization
+
+### Milestone 8 — Evaluation and Visualization
 
 Objective: Evaluate your trained agent’s performance.
 
