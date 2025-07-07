@@ -178,7 +178,27 @@ def main():
     
 
     
+# Convert lists to numpy arrays if not already
+action_counts_per_episode = np.array(action_counts_per_episode)  # shape: (num_episodes, num_actions)
+episode_rewards = np.array(episode_rewards)  # assuming you collected rewards per episode
 
+# Compute average action frequency over all episodes
+avg_action_freq = np.mean(action_counts_per_episode, axis=0)
+
+# Compute overall reward statistics
+avg_reward = np.mean(episode_rewards)
+std_reward = np.std(episode_rewards)
+max_reward = np.max(episode_rewards)
+min_reward = np.min(episode_rewards)
+
+print("=== Training Summary ===")
+print(f"Total episodes: {len(episode_rewards)}")
+print(f"Average episode reward: {avg_reward:.2f} ± {std_reward:.2f}")
+print(f"Max episode reward: {max_reward}")
+print(f"Min episode reward: {min_reward}")
+print("\nAverage action frequencies over all episodes:")
+for i, freq in enumerate(avg_action_freq):
+    print(f"  Action {i}: {freq:.3f}")
 
 # '''
 # Visualization part
